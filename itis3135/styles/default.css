@@ -4,11 +4,9 @@ body{
     background-color: #8a8b8c;
     color: #9d3d3d;
     margin: 10;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 40px;
 }
-h1 {
-    font-size: 1.8em;
+h1,h2  {
     color: #2c3e50;
 }
 
@@ -22,32 +20,18 @@ a:hover {
 }
 
 /* Layout: header/main/footer */
-header {
-    margin-bottom: 20px;
+header, footer {
+    text-align: center;
 }
 
-main {
-    background-color: #ffffff;
-    border: 1px solid #dfe6ee;
-    border-radius: 6px;
-    padding: 30px;
-    margin: 0 auto 20px;
-    max-width: 700px;
+figure{
+    text-align: center;
 }
+
 
 /* Nav */
 nav a {
     margin: 0 8px;
 }
 
-/* Media stuff */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-        color: #a09e9e;
-    }
 
-    h1 {
-        font-size: 1.3em;
-    }
-}
