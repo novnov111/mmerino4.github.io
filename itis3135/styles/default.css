@@ -1,0 +1,9 @@
+body{
+    background-color: grey;
+    front-family: Arial;
+}
+header,
+
+footer {
+    text-align: center;
+}
