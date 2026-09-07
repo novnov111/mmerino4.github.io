@@ -7,6 +7,19 @@ body{
     padding: 20px;
     text-align: center;
 }
+h1 {
+    font-size: 1.8em;
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #cccccc;
+}
 
 /* Layout: header/main/footer */
 header {
