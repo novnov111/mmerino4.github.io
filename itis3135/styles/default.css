@@ -24,6 +24,13 @@ h2, h3 {
     color: #3d2b2b;
 }
  
+nav {
+  text-align: center;
+}
+nav a {
+  padding: 5px 10px; 
+}
+
 a {
     color: #3d2b2b;
     text-decoration: underline;
@@ -39,8 +46,8 @@ hr {
 /* ---- Floated feature photo ---- */
 .feature-photo {
     float: right;
-    max-width: 280px;
-    margin: 0 0 20px 30px;
+    max-width: 250px;
+    margin: 50px 0 50px 10px;
     text-align: center;
 }
  
@@ -64,7 +71,7 @@ footer {
     text-align: center;
     padding-top: 10px;
 }
- 
+
 footer nav a {
     text-decoration: none;
     margin: 0 5px;
@@ -77,3 +84,19 @@ footer p {
 footer .tagline {
     font-style: italic;
 }
+
+@media (max-width: 600px) { 
+    body { 
+        padding: 15px; 
+    } 
+    h1 {   
+        font-size: 1.7em; 
+    } 
+    .feature-photo {   
+        float: none; margin: 20px auto; 
+    } 
+    nav a {   
+        display: inline-block; 
+        padding: 5px; 
+    }
+ }
