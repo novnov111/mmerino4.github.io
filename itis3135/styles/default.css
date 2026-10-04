@@ -24,6 +24,15 @@ h2, h3 {
     color: #3d2b2b;
 }
 
+h6 {
+    font-family: Georgia, 'Times New Roman', serif;
+    text-align: center;
+    color: #3d2b2b;
+    font-size: 2em;
+    white-space: nowrap;
+    margin: 15px 0;
+}
+
 .evaluation-title {
     text-align: left;
 }
@@ -83,10 +92,6 @@ footer nav a {
  
 footer p {
     margin: 8px 0;
-}
- 
-footer .tagline {
-    font-style: italic;
 }
 
 @media (max-width: 600px) { 
