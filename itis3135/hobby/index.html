@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Michael's Travel Journal ✦ What</title>
+    <link rel="icon" href="favicon.ico">
+
+    <style>
+        /* =========================
+           GENERAL PAGE STYLING
+           ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #e8dfd1;
+            color: #263746;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #173f4f;
+            color: #f5ead8;
+            padding: 30px 20px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 8px 0 20px;
+            color: #f0c987;
+            font-style: italic;
+        }
+
+        .hobby-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .hobby-card img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        /* =========================
+           NAVIGATION
+           ========================= */
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        nav a {
+            color: #173f4f;
+            background-color: #f5ead8;
+            padding: 9px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #f0c987;
+            color: #173f4f;
+        }
+
+        nav a.active {
+            background-color: #d97941;
+            color: #ffffff;
+        }
+
+        /* =========================
+           MAIN CONTENT
+           ========================= */
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            display: none;
+            background-color: #f7f1e7;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(23, 63, 79, 0.15);
+        }
+
+        section.active {
+            display: block;
+        }
+
+        section h2 {
+            color: #173f4f;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            border-bottom: 3px solid #d97941;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        section h3 {
+            color: #a9572c;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        p {
+            margin-bottom: 18px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           FIGURES / IMAGES
+           ========================= */
+
+        figure {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        figure img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            max-height: 650px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(23, 63, 79, 0.2);
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #173f4f;
+        }
+
+        .image-note {
+            font-style: italic;
+            color: #66757c;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           TRAVEL CARDS
+           ========================= */
+
+        .travel-card {
+            background-color: #eee2d0;
+            border-left: 5px solid #d97941;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .travel-card h3 {
+            margin-top: 0;
+        }
+
+        /* =========================
+           TABLE
+           ========================= */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #9aa9ad;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #173f4f;
+            color: #f5ead8;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eee2d0;
+        }
+
+        /* =========================
+           AI PROMPTS
+           ========================= */
+
+        .prompt {
+            background-color: #e1ebeb;
+            border-left: 5px solid #4f8991;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .prompt code {
+            font-family: Consolas, monospace;
+        }
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        footer {
+            background-color: #173f4f;
+            color: #f5ead8;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #f0c987;
+        }
+
+        footer a:hover,
+        footer a:focus {
+            color: #ffffff;
+        }
+
+        .validation-links {
+            margin-top: 15px;
+        }
+
+        .validation-links a {
+            margin: 0 8px;
+        }
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            nav a {
+                text-align: center;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Michael's Travel Journal</h1>
+        <p>Exploring new places, experiencing new cultures, and making memories.</p>
+
+        <nav aria-label="Travel site navigation">
+            <a href="#what" data-section="what" class="active">What</a>
+            <a href="#who" data-section="who">Who</a>
+            <a href="#when" data-section="when">When</a>
+            <a href="#where" data-section="where">Where</a>
+            <a href="#how" data-section="how">How</a>
+            <a href="#why" data-section="why">Why</a>
+            <a href="#ai-prompts" data-section="ai-prompts">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- =========================
+             WHAT
+             ========================= -->
+
+        <section id="what" class="active">
+            <h2>What</h2>
+
+            <p>
+                Travel is one of my favorite ways to experience the world.
+                Traveling allows me to see places that are different from
+                what I am used to and experience different cultures, food,
+                people, and environments.
+            </p>
+
+            <figure>
+                <img src="images/michael_in_jorden_1.jpg"
+                     alt="A travel destination photographed during a trip">
+                <figcaption>A Moment From My Travels</figcaption>
+                <p class="image-note">
+                    Source: My personal travel photograph. No AI was used
+                    to create this image.
+                </p>
+            </figure>
+
+            <div class="travel-card">
+                <h3>Exploring</h3>
+                <p>
+                    One of the most exciting parts of traveling is exploring
+                    places that I have never seen before. Even simple walks
+                    around a new city can turn into memorable experiences.
+                </p>
+            </div>
+
+            <div class="travel-card">
+                <h3>Experiencing Culture</h3>
+                <p>
+                    Traveling gives me the opportunity to experience
+                    different traditions, languages, food, architecture,
+                    and ways of life.
+                </p>
+            </div>
+
+            <div class="travel-card">
+                <h3>Making Memories</h3>
+                <p>
+                    Photos and souvenirs are great reminders of a trip,
+                    but some of the best memories come from the unexpected
+                    experiences that happen along the way.
+                </p>
+            </div>
+        </section>
+
+        <!-- =========================
+             WHO
+             ========================= -->
+
+        <section id="who">
+            <h2>Who</h2>
+
+            <p>
+                My interest in travel comes from wanting to experience
+                more of the world. I enjoy visiting places that are
+                different from my everyday surroundings and learning
+                something new from each trip.
+            </p>
+
+            <figure>
+                <img src="images/michael_in_paki.jpg"
+                     alt="A personal travel photograph">
+                <figcaption>Traveling Somewhere New</figcaption>
+                <p class="image-note">
+                    Source: My personal travel photograph. No AI was used
+                    to create this image.
+                </p>
+            </figure>
+
+            <div class="travel-card">
+                <h3>My Travel Style</h3>
+                <p>
+                    I enjoy a mixture of exploring popular attractions
+                    and finding places that are less well known.
+                    I also like having enough freedom in a trip to
+                    discover things along the way.
+                </p>
+            </div>
+
+            <div class="travel-card">
+                <h3>Learning Through Travel</h3>
+                <p>
+                    Every destination can teach you something different.
+                    Traveling can introduce people to new languages,
+                    histories, foods, and perspectives.
+                </p>
+            </div>
+        </section>
+
+        <!-- =========================
+             WHEN
+             ========================= -->
+
+        <section id="when">
+            <h2>When</h2>
+
+            <p>
+                The best time to travel depends on the destination,
+                weather, activities, and how much time is available.
+                Planning ahead can make a major difference in how
+                enjoyable a trip becomes.
+            </p>
+
+            <figure>
+                <img src="images/michael_in_thai.jpg"
+                     alt="A destination photographed during a trip">
+                <figcaption>A Different Season, A Different Experience</figcaption>
+                <p class="image-note">
+                    Source: My personal travel photograph. No AI was used
+                    to create this image.
+                </p>
+            </figure>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Travel Time</th>
+                        <th>Advantages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Spring</td>
+                        <td>Mild weather and outdoor activities.</td>
+                    </tr>
+                    <tr>
+                        <td>Summer</td>
+                        <td>Longer days and more vacation opportunities.</td>
+                    </tr>
+                    <tr>
+                        <td>Fall</td>
+                        <td>Comfortable weather and fewer crowds in some places.</td>
+                    </tr>
+                    <tr>
+                        <td>Winter</td>
+                        <td>Great for certain destinations and seasonal activities.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="travel-card">
+                <h3>Planning Around Your Schedule</h3>
+                <p>
+                    A good trip does not always require a long vacation.
+                    Even a short trip can be enjoyable when the time is
+                    planned well.
+                </p>
+            </div>
+        </section>
+
+        <!-- =========================
+             WHERE
+             ========================= -->
+
+        <section id="where">
+            <h2>Where</h2>
+
+            <p>
+                One of the best parts of travel is that there are almost
+                unlimited places to explore. Different countries and
+                cities offer completely different experiences.
+            </p>
+
+            <figure>
+                <img src="images/michael_in_ja.jpg"
+                     alt="A destination from one of Michael's trips">
+                <figcaption>One of the Places I Have Visited</figcaption>
+                <p class="image-note">
+                    Source: My personal travel photograph. No AI was used
+                    to create this image.
+                </p>
+            </figure>
+
+            <div class="travel-card">
+                <h3>Countries</h3>
+                <p>
+                    Replace this paragraph with the countries you have
+                    personally visited. You can describe your favorite
+                    destination and what made it memorable.
+                </p>
+            </div>
+
+            <div class="travel-card">
+                <h3>Cities</h3>
+                <p>
+                    Cities can provide a completely different travel
+                    experience. Architecture, restaurants, museums,
+                    transportation, and local neighborhoods can all
+                    become part of the adventure.
+                </p>
+            </div>
+
+            <div class="travel-card">
+                <h3>Places I Want to Visit</h3>
+                <p>
+                    There are still many places I would like to visit.
+                    This is where I can add a few destinations that are
+                    on my future travel list.
+                </p>
+            </div>
+        </section>
+
+        <!-- =========================
+             HOW
+             ========================= -->
+
+        <section id="how">
+            <h2>How</h2>
+
+            <p>
+                Traveling becomes much easier when the important details
+                are planned ahead of time. A little preparation can
+                prevent many problems during a trip.
+            </p>
+
+            <figure>
+                <img src="images/michael_in_du.jpg"
+                     alt="Travel photograph showing part of a trip">
+                <figcaption>Part of the Travel Experience</figcaption>
+                <p class="image-note">
+                    Source: My personal travel photograph. No AI was used
+                    to create this image.
+                </p>
+            </figure>
+
+            <div class="travel-card">
+                <h3>1. Choose a Destination</h3>
+                <p>
+                    Start by deciding where you want to go and what you
+                    want to experience there.
+                </p>
+            </div>
+
+            <div class="travel-card">
+                <h3>2. Plan a Budget</h3>
+                <p>
+                    Transportation, lodging, food, activities, and
+                    unexpected expenses should all be considered.
+                </p>
+            </div>
+
+            <div class="travel-card">
+                <h3>3. Pack Smart</h3>
+                <p>
+                    Packing depends on the destination and length of the
+                    trip. Bringing only what is necessary can make travel
+                    much easier.
+                </p>
+            </div>
+
+            <ul>
+                <li>Check your passport and travel documents.</li>
+                <li>Research transportation before leaving.</li>
+                <li>Keep important information backed up.</li>
+                <li>Leave some room for unexpected plans.</li>
+            </ul>
+        </section>
+
+        <!-- =========================
+             WHY
+             ========================= -->
+
+        <section id="why">
+            <h2>Why</h2>
+
+            <p>
+                I enjoy traveling because it gives me a chance to step
+                outside of my normal routine. Seeing somewhere new can
+                make an ordinary year feel much more memorable.
+            </p>
+
+            <figure>
+                <img src="images/michael_in_eg.jpg"
+                     alt="A memorable travel photograph">
+                <figcaption>A Memory Worth Keeping</figcaption>
+                <p class="image-note">
+                    Source: My personal travel photograph. No AI was used
+                    to create this image.
+                </p>
+            </figure>
+
+            <div class="travel-card">
+                <h3>New Experiences</h3>
+                <p>
+                    Travel gives me opportunities to try things that I
+                    would not normally experience at home.
+                </p>
+            </div>
+
+            <div class="travel-card">
+                <h3>Different Perspectives</h3>
+                <p>
+                    Visiting different places can help people understand
+                    that there are many different ways to live and see
+                    the world.
+                </p>
+            </div>
+
+            <div class="travel-card">
+                <h3>Memories</h3>
+                <p>
+                    The experiences from a trip can stay with you long
+                    after you return home. That is one of the biggest
+                    reasons I enjoy traveling.
+                </p>
+            </div>
+        </section>
+
+        <!-- =========================
+             AI PROMPTS
+             ========================= -->
+
+        <section id="ai-prompts">
+            <h2>AI Prompts</h2>
+
+            <p>
+                AI was used as a development assistant while creating
+                this website. The prompts below document some of the
+                ways AI helped with the project.
+            </p>
+
+            <div class="prompt">
+                <h3>Website Structure</h3>
+                <p>
+                    <code>
+                        Create a single-page travel hobby website that
+                        uses sections for What, Who, When, Where, How,
+                        Why, and AI Prompts. Make the sections behave
+                        like separate pages using JavaScript.
+                    </code>
+                </p>
+            </div>
+
+            <div class="prompt">
+                <h3>CSS Design</h3>
+                <p>
+                    <code>
+                        Create an embedded CSS design for a travel website
+                        using CRAP principles, a non-white background,
+                        readable colors, and a color scheme different
+                        from my main course website.
+                    </code>
+                </p>
+            </div>
+
+            <div class="prompt">
+                <h3>Writing Assistance</h3>
+                <p>
+                    <code>
+                        Help me write beginner-friendly content about
+                        travel for the What, Who, When, Where, How,
+                        and Why sections of my hobby website.
+                    </code>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Michael's Travel Journal
+        </p>
+
+        <p>
+            Designed by
+            <a href="../index.html">Michael Merino</a>
+        </p>
+
+        <div class="validation-links">
+            <a href="https://validator.w3.org/" target="_blank"
+               rel="noopener">HTML Validator</a>
+
+            <a href="https://jigsaw.w3.org/css-validator/"
+               target="_blank" rel="noopener">CSS Validator</a>
+
+            <a href="https://wave.webaim.org/" target="_blank"
+               rel="noopener">Accessibility</a>
+        </div>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll("nav a");
+        const sections = document.querySelectorAll("main section");
+
+        function showSection(sectionId) {
+            sections.forEach(function(section) {
+                section.classList.remove("active");
+            });
+
+            navLinks.forEach(function(link) {
+                link.classList.remove("active");
+            });
+
+            const selectedSection = document.getElementById(sectionId);
+            const selectedLink = document.querySelector(
+                'nav a[data-section="' + sectionId + '"]'
+            );
+
+            if (selectedSection) {
+                selectedSection.classList.add("active");
+            }
+
+            if (selectedLink) {
+                selectedLink.classList.add("active");
+            }
+
+            const heading = selectedSection.querySelector("h2");
+            document.title = "Michael's Travel Journal ✦ "
+                + heading.textContent;
+        }
+
+        navLinks.forEach(function(link) {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+
+                const sectionId = link.getAttribute("data-section");
+
+                showSection(sectionId);
+
+                history.pushState(null, "", "#" + sectionId);
+            });
+        });
+
+        window.addEventListener("load", function() {
+            const startingSection = window.location.hash.substring(1);
+
+            if (startingSection &&
+                document.getElementById(startingSection)) {
+                showSection(startingSection);
+            } else {
+                showSection("what");
+            }
+        });
+    </script>
+
+</body>
+</html>
+```
