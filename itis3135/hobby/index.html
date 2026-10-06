@@ -24,8 +24,8 @@
         /* HEADER: now spans the full width of the browser */
         /* The header breaks out of the centered body so it still spans the whole browser. */
         header {
-            width: 100vw;
             margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
             background-color: #064E3B;
             color: #F1F5E9;
             padding: 40px 20px 24px;
@@ -37,7 +37,7 @@
             margin: 0;
             color: #F1F5E9;
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
         }
 
         header p {
@@ -95,7 +95,7 @@
             margin-bottom: 20px;
         }
 
-        .intro h2 {
+        .intro-title {
             margin: 0 0 16px;
             color: #F1F5E9;
             font-family: Georgia, "Times New Roman", serif;
@@ -127,7 +127,7 @@
             padding: 20px;
         }
 
-        .card h3 {
+        .card-title {
             margin: 0 0 10px;
             color: #D4AF37;
             font-family: Georgia, "Times New Roman", serif;
@@ -136,7 +136,7 @@
         .card p { margin: 0; }
         .card p + p { margin-top: 12px; }
 
-        .card.full { margin-bottom: 20px; }
+        .full { margin-bottom: 20px; }
 
         .card ul { margin: 0; padding-left: 22px; }
         li { margin-bottom: 8px; }
@@ -193,8 +193,8 @@
 
         /* FOOTER */
         footer {
-            width: 100vw;
             margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
             background-color: #04271F;
             color: #E8F0E8;
             text-align: center;
@@ -210,7 +210,6 @@
         @media (max-width: 700px) {
             .split { grid-template-columns: 1fr; }
             .photo-card img { max-height: 480px; }
-            h1 { font-size: 2rem; }
         }
     </style>
 
@@ -241,7 +240,7 @@
           group and to build the two-column layout.
         - No span elements are needed on this page, so none are used.
         - class attributes (intro, split, stack, card, photo-card, full,
-          prompt-text) are used because the same style repeats many times.
+          prompt-text, intro-title, card-title) are used because the same style repeats many times.
           A class lets one CSS rule style every matching element.
         - id attributes (what, who, when, where, how, why, ai-prompts) are
           used on each section so the navigation links and JavaScript can
@@ -252,7 +251,7 @@
         <!-- WHAT -->
         <section id="what" class="active">
             <div class="intro">
-                <h2>What</h2>
+                <h2 class="intro-title">What</h2>
                 <p>Travel is one of my favorite ways to experience the world. Traveling allows me to see places that are different from what I am used to and experience different cultures, food, people, and environments.</p>
             </div>
 
@@ -269,18 +268,22 @@
 
                 <div class="stack">
                     <div class="card">
-                        <h3>Exploring</h3>
+                        <h3 class="card-title">Exploring</h3>
                         <p>One of the most exciting parts of traveling is exploring places that I have never seen before. Even simple walks around a new city can turn into memorable experiences.</p>
                     </div>
                     <div class="card">
-                        <h3>Experiencing Culture</h3>
+                        <h3 class="card-title">Experiencing Culture</h3>
                         <p>Traveling gives me the opportunity to experience different traditions, languages, food, architecture, and ways of life.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Trying Local Food</h3>
+                        <p>Food is one of the easiest ways to understand a place. Visiting local markets, street stalls, and family-run restaurants lets me taste dishes I cannot find at home and learn the stories behind them.</p>
                     </div>
                 </div>
             </div>
 
             <div class="card full">
-                <h3>Making Memories</h3>
+                <h3 class="card-title">Making Memories</h3>
                 <p>Photos and souvenirs are great reminders of a trip, but some of the best memories come from the unexpected experiences that happen along the way.</p>
             </div>
         </section>
@@ -288,7 +291,7 @@
         <!-- WHO -->
         <section id="who">
             <div class="intro">
-                <h2>Who</h2>
+                <h2 class="intro-title">Who</h2>
                 <p>My interest in travel comes from wanting to experience more of the world. I enjoy visiting places that are different from my everyday surroundings and learning something new from each trip.</p>
             </div>
 
@@ -304,13 +307,13 @@
                 </div>
 
                 <div class="card">
-                    <h3>My Travel Style</h3>
+                    <h3 class="card-title">My Travel Style</h3>
                     <p>I enjoy a mixture of exploring popular attractions and finding places that are less well known. I also like having enough freedom in a trip to discover things along the way.</p>
                 </div>
             </div>
 
             <div class="card full">
-                <h3>Learning Through Travel</h3>
+                <h3 class="card-title">Learning Through Travel</h3>
                 <p>Every destination can teach you something different. Traveling can introduce people to new languages, histories, foods, and perspectives.</p>
             </div>
         </section>
@@ -318,7 +321,7 @@
         <!-- WHEN -->
         <section id="when">
             <div class="intro">
-                <h2>When</h2>
+                <h2 class="intro-title">When</h2>
                 <p>The best time to travel depends on the destination, weather, activities, and how much time is available. Planning ahead can make a major difference in how enjoyable a trip becomes.</p>
             </div>
 
@@ -334,7 +337,7 @@
                 </div>
 
                 <div class="card">
-                    <h3>Best Times to Travel</h3>
+                    <h3 class="card-title">Best Times to Travel</h3>
                     <table>
                         <thead>
                             <tr><th>Travel Time</th><th>Advantages</th></tr>
@@ -350,7 +353,7 @@
             </div>
 
             <div class="card full">
-                <h3>Planning Around Your Schedule</h3>
+                <h3 class="card-title">Planning Around Your Schedule</h3>
                 <p>A good trip does not always require a long vacation. Even a short trip can be enjoyable when the time is planned well.</p>
             </div>
         </section>
@@ -358,7 +361,7 @@
         <!-- WHERE -->
         <section id="where">
             <div class="intro">
-                <h2>Where</h2>
+                <h2 class="intro-title">Where</h2>
                 <p>One of the best parts of travel is that there are almost unlimited places to explore. Different countries and cities offer completely different experiences.</p>
             </div>
 
@@ -375,18 +378,18 @@
 
                 <div class="stack">
                     <div class="card">
-                        <h3>Countries</h3>
+                        <h3 class="card-title">Countries</h3>
                         <p>Replace this paragraph with the countries you have personally visited. You can describe your favorite destination and what made it memorable.</p>
                     </div>
                     <div class="card">
-                        <h3>Cities</h3>
+                        <h3 class="card-title">Cities</h3>
                         <p>Cities can provide a completely different travel experience. Architecture, restaurants, museums, transportation, and local neighborhoods can all become part of the adventure.</p>
                     </div>
                 </div>
             </div>
 
             <div class="card full">
-                <h3>Places I Want to Visit</h3>
+                <h3 class="card-title">Places I Want to Visit</h3>
                 <p>There are still many places I would like to visit. This is where I can add a few destinations that are on my future travel list.</p>
             </div>
         </section>
@@ -394,7 +397,7 @@
         <!-- HOW -->
         <section id="how">
             <div class="intro">
-                <h2>How</h2>
+                <h2 class="intro-title">How</h2>
                 <p>Traveling becomes much easier when the important details are planned ahead of time. A little preparation can prevent many problems during a trip.</p>
             </div>
 
@@ -410,7 +413,7 @@
                 </div>
 
                 <div class="card">
-                    <h3>Planning Steps</h3>
+                    <h3 class="card-title">Planning Steps</h3>
                     <p><strong>1. Choose a Destination.</strong> Start by deciding where you want to go and what you want to experience there.</p>
                     <p><strong>2. Plan a Budget.</strong> Transportation, lodging, food, activities, and unexpected expenses should all be considered.</p>
                     <p><strong>3. Pack Smart.</strong> Packing depends on the destination and length of the trip. Bringing only what is necessary can make travel much easier.</p>
@@ -418,7 +421,7 @@
             </div>
 
             <div class="card full">
-                <h3>Before You Go</h3>
+                <h3 class="card-title">Before You Go</h3>
                 <ul>
                     <li>Check your passport and travel documents.</li>
                     <li>Research transportation before leaving.</li>
@@ -431,7 +434,7 @@
         <!-- WHY -->
         <section id="why">
             <div class="intro">
-                <h2>Why</h2>
+                <h2 class="intro-title">Why</h2>
                 <p>I enjoy traveling because it gives me a chance to step outside of my normal routine. Seeing somewhere new can make an ordinary year feel much more memorable.</p>
             </div>
 
@@ -448,18 +451,18 @@
 
                 <div class="stack">
                     <div class="card">
-                        <h3>New Experiences</h3>
+                        <h3 class="card-title">New Experiences</h3>
                         <p>Travel gives me opportunities to try things that I would not normally experience at home.</p>
                     </div>
                     <div class="card">
-                        <h3>Different Perspectives</h3>
+                        <h3 class="card-title">Different Perspectives</h3>
                         <p>Visiting different places can help people understand that there are many different ways to live and see the world.</p>
                     </div>
                 </div>
             </div>
 
             <div class="card full">
-                <h3>Memories</h3>
+                <h3 class="card-title">Memories</h3>
                 <p>The experiences from a trip can stay with you long after you return home. That is one of the biggest reasons I enjoy traveling.</p>
             </div>
         </section>
@@ -467,7 +470,7 @@
         <!-- AI PROMPTS -->
         <section id="ai-prompts">
             <div class="intro">
-                <h2>AI Prompts</h2>
+                <h2 class="intro-title">AI Prompts</h2>
                 <p>AI was used as a development assistant while creating this website. The prompts below document some of the ways AI helped with the project.</p>
             </div>
 
@@ -484,18 +487,18 @@
 
                 <div class="stack">
                     <div class="card">
-                        <h3>Website Structure</h3>
+                        <h3 class="card-title">Website Structure</h3>
                         <p class="prompt-text">Create a single-page travel hobby website that uses sections for What, Who, When, Where, How, Why, and AI Prompts. Make the sections behave like separate pages using JavaScript.</p>
                     </div>
                     <div class="card">
-                        <h3>CSS Design</h3>
+                        <h3 class="card-title">CSS Design</h3>
                         <p class="prompt-text">Create an embedded CSS design for a travel website using CRAP principles, a non-white background, readable colors, and a color scheme different from my main course website.</p>
                     </div>
                 </div>
             </div>
 
             <div class="card full">
-                <h3>Writing Assistance</h3>
+                <h3 class="card-title">Writing Assistance</h3>
                 <p class="prompt-text">Help me write beginner-friendly content about travel for the What, Who, When, Where, How, and Why sections of my hobby website.</p>
             </div>
         </section>
