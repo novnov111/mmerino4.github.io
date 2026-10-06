@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Michael's Travel Journal ✦ What</title>
-    <link rel="icon" href="favicon.ico">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <style>
         /* =========================
@@ -17,7 +18,8 @@
         }
 
         body {
-            margin: 0;
+            max-width: 1200px;
+            margin: 0 auto;
             background-color: #e8dfd1;
             color: #263746;
             font-family: Arial, Helvetica, sans-serif;
@@ -25,8 +27,8 @@
         }
 
         header {
-            background-color: #173f4f;
-            color: #f5ead8;
+            background-color: #064E3B;
+            color: #E8F0E8;
             padding: 30px 20px 20px;
             text-align: center;
         }
@@ -39,7 +41,7 @@
 
         header p {
             margin: 8px 0 20px;
-            color: #f0c987;
+            color: #CFE3CF;
             font-style: italic;
         }
 
@@ -62,31 +64,29 @@
            ========================= */
 
         nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
+            background-color: #064E3B;
+            padding: 15px;
+            text-align: center;
         }
 
         nav a {
-            color: #173f4f;
-            background-color: #f5ead8;
-            padding: 9px 15px;
-            border-radius: 20px;
+            color: #F7FAF5;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.2s;
+            margin: 0 10px;
+            padding: 10px 14px;
+            border-radius: 8px;
         }
 
-        nav a:hover,
-        nav a:focus {
-            background-color: #f0c987;
-            color: #173f4f;
+        footer a:hover,
+        footer a:focus {
+            /* White text provides contrast against the dark footer background. */
+            color: #A7C9A5;
         }
 
         nav a.active {
-            background-color: #d97941;
-            color: #ffffff;
+            background-color: #A7C9A5;
+            color: #064E3B;
         }
 
         /* =========================
@@ -112,12 +112,8 @@
         }
 
         section h2 {
-            color: #173f4f;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 2rem;
-            border-bottom: 3px solid #d97941;
-            padding-bottom: 8px;
-            margin-top: 0;
+            color: #064E3B;
+            border-bottom: 3px solid #16705A;
         }
 
         section h3 {
@@ -135,6 +131,16 @@
 
         li {
             margin-bottom: 8px;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #064E3B;
+        }
+
+        .planet {
+            font-size: 1.4rem;
         }
 
         /* =========================
@@ -175,8 +181,8 @@
            ========================= */
 
         .travel-card {
-            background-color: #eee2d0;
-            border-left: 5px solid #d97941;
+            background-color: #E8F0E8;
+            border-left: 5px solid #16705A;
             padding: 18px;
             margin: 20px 0;
             border-radius: 6px;
@@ -233,15 +239,15 @@
            ========================= */
 
         footer {
-            background-color: #173f4f;
-            color: #f5ead8;
+            background-color: #064E3B;
+            color: #E8F0E8;
             text-align: center;
             padding: 30px 20px;
             margin-top: 30px;
         }
 
         footer a {
-            color: #f0c987;
+            color: #A7C9A5;
         }
 
         footer a:hover,
@@ -284,25 +290,32 @@
             }
         }
     </style>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <header>
         <h1>Michael's Travel Journal</h1>
-        <p>Exploring new places, experiencing new cultures, and making memories.</p>
+        <p><em>Exploring new places, experiencing new cultures, and making memories.</em></p>
 
-        <nav aria-label="Travel site navigation">
-            <a href="#what" data-section="what" class="active">What</a>
-            <a href="#who" data-section="who">Who</a>
-            <a href="#when" data-section="when">When</a>
-            <a href="#where" data-section="where">Where</a>
-            <a href="#how" data-section="how">How</a>
-            <a href="#why" data-section="why">Why</a>
-            <a href="#ai-prompts" data-section="ai-prompts">AI Prompts</a>
+        <nav>
+            <a href="#what" data-section="what">🌍 What</a>
+            <a href="#who" data-section="who">🌎 Who</a>
+            <a href="#when" data-section="when">🌏 When</a>
+            <a href="#where" data-section="where">🌏 Where</a>
+            <a href="#how" data-section="how">🌍 How</a>
+            <a href="#why" data-section="why">🌎 Why</a>
+            <a href="#ai-prompts" data-section="ai-prompts">🌏 AI Prompts</a>
         </nav>
     </header>
-
+    <!--
+        The div elements organize travel cards, prompts, validation links, and
+        other grouped content. The class and id attributes are used to style
+        those groups and to let the JavaScript navigation switch between the
+        different hobby sections.
+    -->
     <main>
 
         <!-- =========================
@@ -311,6 +324,7 @@
 
         <section id="what" class="active">
             <h2>What</h2>
+            
 
             <p>
                 Travel is one of my favorite ways to experience the world.
@@ -324,8 +338,7 @@
                      alt="A travel destination photographed during a trip">
                 <figcaption>A Moment From My Travels</figcaption>
                 <p class="image-note">
-                    Source: My personal travel photograph. No AI was used
-                    to create this image.
+                    <em>Source: My personal travel photograph. No AI was used to create this image.</em>
                 </p>
             </figure>
 
@@ -376,8 +389,7 @@
                      alt="A personal travel photograph">
                 <figcaption>Traveling Somewhere New</figcaption>
                 <p class="image-note">
-                    Source: My personal travel photograph. No AI was used
-                    to create this image.
+                    <em>Source: My personal travel photograph. No AI was used to create this image.</em>
                 </p>
             </figure>
 
@@ -420,8 +432,8 @@
                      alt="A destination photographed during a trip">
                 <figcaption>A Different Season, A Different Experience</figcaption>
                 <p class="image-note">
-                    Source: My personal travel photograph. No AI was used
-                    to create this image.
+                    <em>Source: My personal travel photograph. No AI was used
+                    to create this image.</em>
                 </p>
             </figure>
 
@@ -480,8 +492,8 @@
                      alt="A destination from one of Michael's trips">
                 <figcaption>One of the Places I Have Visited</figcaption>
                 <p class="image-note">
-                    Source: My personal travel photograph. No AI was used
-                    to create this image.
+                    <em>Source: My personal travel photograph. No AI was used
+                    to create this image.</em>
                 </p>
             </figure>
 
@@ -532,8 +544,8 @@
                      alt="Travel photograph showing part of a trip">
                 <figcaption>Part of the Travel Experience</figcaption>
                 <p class="image-note">
-                    Source: My personal travel photograph. No AI was used
-                    to create this image.
+                    <em>Source: My personal travel photograph. No AI was used
+                    to create this image.</em>
                 </p>
             </figure>
 
@@ -588,8 +600,8 @@
                      alt="A memorable travel photograph">
                 <figcaption>A Memory Worth Keeping</figcaption>
                 <p class="image-note">
-                    Source: My personal travel photograph. No AI was used
-                    to create this image.
+                    <em>Source: My personal travel photograph. No AI was used
+                    to create this image.</em>
                 </p>
             </figure>
 
@@ -676,11 +688,6 @@
             &copy; 2026 Michael's Travel Journal
         </p>
 
-        <p>
-            Designed by
-            <a href="../index.html">Michael Merino</a>
-        </p>
-
         <div class="validation-links">
             <a href="https://validator.w3.org/" target="_blank"
                rel="noopener">HTML Validator</a>
@@ -690,6 +697,11 @@
 
             <a href="https://wave.webaim.org/" target="_blank"
                rel="noopener">Accessibility</a>
+
+            <p>
+                Designed by
+                <a href="../michaelmerinodesigns.com/index.html">Michael Merino</a>
+            </p>
         </div>
     </footer>
 
@@ -748,6 +760,7 @@
         });
     </script>
 
+       <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
 ```
