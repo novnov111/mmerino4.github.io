@@ -6,7 +6,7 @@
 
     <title>Michael Merino Designs | Home</title>
 
-    <link rel="icon" href="michaelmerinodesigns.com/images/favicon.png" type="image/png">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js"
         defer></script>
@@ -44,27 +44,6 @@
             height: 65px;
         }
 
-        nav {
-            background-color: #2b2b2b;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fffbfb;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:visited {
-            color: #fffbfb;
-        }
-
-        nav a:hover {
-            color: #b3161c;
-        }
-
         main {
             padding: 30px;
         }
@@ -76,6 +55,22 @@
 
         h3 {
             color: #7a0f13;
+        }
+
+        /* Controls the color of all links on the page */
+        a {
+            color: #b3161c;
+            text-decoration: none;
+        }
+
+        /* Keeps visited links from becoming purple */
+        a:visited {
+            color: #7a0f13;
+        }
+
+        /* Changes the link color when the mouse is over it */
+        a:hover {
+            color: #2b2b2b;
         }
 
         ul {
@@ -112,11 +107,6 @@
             main {
                 padding: 20px;
             }
-
-            nav a {
-                display: inline-block;
-                margin: 5px 10px;
-            }
         }
     </style>
 
@@ -126,46 +116,55 @@
 <body>
 
     <header>
-        <img src="https://openclipart.org/download/295940/blackhorse.svg"
-            alt="Black horse logo for Michael Merino Designs">
 
-        <h1>Michael Merino Designs</h1>
+        <h1>
+            <!-- img w/ class for design logo -->
+            <img src="../images/horse.png" alt="Black horse logo for Michael Merino Designs">
+            <!-- h1 w/ class for main title for the entire site -->
+            Michael Merino Designs
+        </h1>
     </header>
 
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
     <main>
+        <!-- h2 w/ class for title of the page -->
         <h2>Home</h2>
 
-        <p><em>Creative technology designed for your everyday needs.</em></p>
+        <!-- p w/ class of first block of text -->
+        <p>Creative technology designed for your everyday needs.</p>
 
         <p>
+            <!-- p w/ class of first block of text -->
             Michael Merino Designs offers specialized drones for your
             everyday needs.
         </p>
 
-        <h3 id="services">Amazing Features</h3>
+        <h3>Amazing Features</h3>
 
         <ul>
+            <!-- p w/ class of first block of text -->
             <li>Quick drones</li>
+            <!-- p w/ class of first block of text -->
             <li>Specialized to your needs</li>
+            <!-- p w/ class of first block of text -->
             <li>Made in the USA</li>
+            <!-- p w/ class of first block of text -->
             <li>Lifetime warranty</li>
+            <!-- p w/ class of first block of text -->
             <li>Free shipping</li>
+            <!-- p w/ class of first block of text -->
             <li>AI cameras</li>
         </ul>
 
         <p>
+            <!-- p w/ class of first block of text -->
             Our drones are designed to provide reliable performance while
             giving customers useful features for everyday activities.
             We focus on creating products that are simple, dependable,
             and specialized to meet different customer needs.
         </p>
 
-        <section id="contact">
+        <!-- address w/ class for contact information -->
+        <section>
             <h3>Contact</h3>
 
             <p>
@@ -179,15 +178,18 @@
             <p>
                 <strong>Email:</strong> fake@thisemailplease.com
             </p>
+
         </section>
     </main>
 
-    <footer>
-        <p>
-            Page created by Michael Merino Designs
-            | Certified in Web Development
-        </p>
-    </footer>
+        <footer>
+            <p>
+                Page created by Michael Merino Designs
+                | Certified in Web Development
+            </p>
+
+            <p><em>Creative technology designed for your everyday needs.</em></p>
+        </footer>
 
     <script src="https://accumulus.talusmeus.com/js/accumulus.js"></script>
 
