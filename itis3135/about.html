@@ -10,17 +10,18 @@
     <link rel="stylesheet" href="styles/default.css">
     <link rel="icon" href="images/favicon.png" type="image/png">
 
-    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
+    <!-- The div is used to include the shared header component on this page. -->
     <div data-include="components/header.html"></div>
 
     <main>
         <h2>About</h2>
 
+        <!-- The class is used to apply the feature-photo styling to this image. -->
         <figure class="feature-photo">
             <img src="images/me-and-deer.jpg" alt="Michael Merino with a deer">
         </figure>
@@ -30,7 +31,9 @@
             UNC Charlotte course ITIS3135 - Front-End Web Application
             Development, taught by Mr. von Briesen. Additional information
             about the course can be found on the
-            <a href="https://divonbriesen.github.io/teaching/itis3135/">ITIS3135 course website</a>.
+            <a href="https://divonbriesen.github.io/teaching/itis3135/">
+                ITIS3135 course website
+            </a>.
         </p>
 
         <p>
@@ -64,9 +67,12 @@
         </ul>
     </main>
 
+    <!-- The div is used to include the shared footer component on this page. -->
     <div data-include="components/footer.html"></div>
 
     <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js"></script>
 
 </body>
+
 </html>
