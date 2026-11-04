@@ -12,14 +12,111 @@
 </head>
 <body>
     <div data-include="components/header.html"></div>
-    <main>
+
+        <main class="garage-page">
+
         <h2>Cards Page</h2>
-        <!-- The feature-photo class lets the stylesheet control the image's size and placement. -->
-        <figure class="feature-photo">
-            <img src="images/me-and-deer.jpg" alt="Feature photo">
-        </figure>
-        <h3>Cards Page</h3>
-        <p>This is the cards page for my ITIS3135 course website.</p>
+
+        <p class="cards-intro">
+            Welcome to Midnight Mustang Garage! Explore our collection
+            of automotive inspiration, performance vehicles, and
+            accessories for car enthusiasts.
+        </p>
+
+        <!-- The card-grid class organizes the cards into a responsive two-column layout.
+             The mustang-card class groups each image, heading, and description together. -->
+        <section class="card-grid" aria-label="Automotive collection">
+
+            <article class="mustang-card">
+                <h3>Performance Cars</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                    alt="Silver performance sports car parked outdoors">
+
+                <p>
+                    Performance cars combine powerful engines,
+                    sharp designs, and exciting driving experiences.
+                </p>
+            </article>
+
+            <article class="mustang-card">
+                <h3>Car Detailing</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                    alt="Vehicle being washed during a detailing session">
+
+                <p>
+                    Automotive detailing products help protect paint
+                    and keep vehicles looking clean and polished.
+                </p>
+            </article>
+
+            <article class="mustang-card">
+                <h3>Engine Performance</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                    alt="Automotive engine components in a workshop">
+
+                <p>
+                    Understanding engine components helps enthusiasts
+                    choose reliable performance upgrades.
+                </p>
+            </article>
+
+            <article class="mustang-card">
+                <h3>Wheels And Tires</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1600705722908-bab4b7c7a3c1?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                    alt="Close-up view of a car wheel and tire">
+
+                <p>
+                    Quality wheels and tires improve vehicle appearance,
+                    handling, and road performance.
+                </p>
+            </article>
+
+            <article class="mustang-card">
+                <h3>Custom Styling</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                    alt="Close view of a sporty car front end">
+
+                <p>
+                    Custom bumpers, body kits, and exterior accessories
+                    give every vehicle a unique appearance.
+                </p>
+            </article>
+
+            <article class="mustang-card">
+                <h3>Road Presence</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                    alt="Red sports car photographed from the side">
+
+                <p>
+                    A clean and properly maintained vehicle
+                    makes an impression wherever it goes.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- The cards-note class separates the closing garage message from the card gallery. -->
+        <section class="cards-note">
+            <h3>Our Garage Rule</h3>
+
+            <p>
+                Build with a plan, use the right tools,
+                and never trade safety for appearance or speed.
+            </p>
+        </section>
+
     </main>
     <hr>
    <div data-include="components/footer.html"></div>
