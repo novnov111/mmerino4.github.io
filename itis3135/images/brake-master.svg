@@ -1,0 +1,15 @@
+                <svg class="car-art" viewBox="0 0 200 120"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Performance brake rotor illustration">
+                    <ellipse cx="100" cy="105" rx="60" ry="7" fill="#c9b99f"/>
+                    <circle cx="90" cy="60" r="43" fill="#aaa9a5"
+                        stroke="#3d2b2b" stroke-width="4"/>
+                    <circle cx="90" cy="60" r="27" fill="#ddd8ce"
+                        stroke="#3d2b2b" stroke-width="3"/>
+                    <circle cx="90" cy="60" r="12" fill="#555"/>
+                    <path d="M124 29 L154 35 L166 55 L160 86
+                        L135 91 L119 74 Z"
+                        fill="#8b3029" stroke="#3d2b2b" stroke-width="4"/>
+                    <path d="M132 43 L155 47 M130 58 L158 62 M129 73 L154 77"
+                        stroke="#e6bd79" stroke-width="4"/>
+                </svg>

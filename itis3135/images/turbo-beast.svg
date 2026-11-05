@@ -1,0 +1,14 @@
+                <svg class="car-art" viewBox="0 0 200 120"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Turbocharger illustration">
+                    <ellipse cx="100" cy="105" rx="60" ry="7" fill="#c9b99f"/>
+                    <circle cx="100" cy="60" r="43" fill="#a65f30"
+                        stroke="#3d2b2b" stroke-width="5"/>
+                    <circle cx="100" cy="60" r="29" fill="#e1b675"
+                        stroke="#3d2b2b" stroke-width="4"/>
+                    <circle cx="100" cy="60" r="19" fill="#3d2b2b"/>
+                    <path d="M100 41 C126 42 123 75 103 78
+                        C88 79 85 60 100 60 C90 52 91 45 100 41Z"
+                        fill="#d28a47"/>
+                    <circle cx="100" cy="60" r="6" fill="#ddd2bd"/>
+                </svg>

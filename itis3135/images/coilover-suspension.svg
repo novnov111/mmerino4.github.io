@@ -1,0 +1,13 @@
+                <svg class="car-art" viewBox="0 0 200 120"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Coilover suspension illustration">
+                    <ellipse cx="100" cy="105" rx="40" ry="7" fill="#c9b99f"/>
+                    <rect x="91" y="12" width="18" height="94" rx="5"
+                        fill="#aaa" stroke="#3d2b2b" stroke-width="3"/>
+                    <path d="M100 16 C48 25 152 35 100 44
+                        C48 53 152 63 100 72
+                        C48 81 152 91 100 100"
+                        fill="none" stroke="#a65f30" stroke-width="8"/>
+                    <rect x="82" y="8" width="36" height="9" rx="3" fill="#d2a15e"/>
+                    <rect x="82" y="101" width="36" height="9" rx="3" fill="#d2a15e"/>
+                </svg>

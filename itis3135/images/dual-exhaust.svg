@@ -1,0 +1,18 @@
+                <svg class="car-art" viewBox="0 0 200 120"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Dual exhaust system illustration">
+                    <ellipse cx="100" cy="105" rx="65" ry="7" fill="#c9b99f"/>
+                    <path d="M35 30 L75 30 L75 65 L55 95"
+                        fill="none" stroke="#888" stroke-width="15"
+                        stroke-linecap="round"/>
+                    <path d="M165 30 L125 30 L125 65 L145 95"
+                        fill="none" stroke="#888" stroke-width="15"
+                        stroke-linecap="round"/>
+                    <rect x="23" y="18" width="54" height="23" rx="7"
+                        fill="#aaa" stroke="#3d2b2b" stroke-width="4"/>
+                    <rect x="123" y="18" width="54" height="23" rx="7"
+                        fill="#aaa" stroke="#3d2b2b" stroke-width="4"/>
+                    <path d="M42 95 H67 M133 95 H158"
+                        stroke="#3d2b2b" stroke-width="12"
+                        stroke-linecap="round"/>
+                </svg>

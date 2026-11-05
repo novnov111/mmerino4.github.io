@@ -1,0 +1,13 @@
+                <svg class="car-art" viewBox="0 0 200 120"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Performance wheel illustration">
+                    <ellipse cx="100" cy="105" rx="55" ry="7" fill="#c9b99f"/>
+                    <circle cx="100" cy="60" r="47" fill="#292929"/>
+                    <circle cx="100" cy="60" r="34" fill="#aaa9a5"
+                        stroke="#3d2b2b" stroke-width="4"/>
+                    <circle cx="100" cy="60" r="25" fill="#444"/>
+                    <g stroke="#ddd5c7" stroke-width="7">
+                        <path d="M100 35 V85 M75 60 H125 M82 42 L118 78 M118 42 L82 78"/>
+                    </g>
+                    <circle cx="100" cy="60" r="9" fill="#a65f30"/>
+                </svg>
