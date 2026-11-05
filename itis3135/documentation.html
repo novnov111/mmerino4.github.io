@@ -12,14 +12,231 @@
 </head>
 <body>
     <div data-include="components/header.html"></div>
-    <main>
+ <main class="garage-page">
+
         <h2>Documentation Page</h2>
-        <!-- The feature-photo class lets the stylesheet control the image's size and placement. -->
-        <figure class="feature-photo">
-            <img src="images/me-and-deer.jpg" alt="Feature photo">
-        </figure>
-        <h3>Documentation Page</h3>
-        <p>This is the documentation page for my ITIS3135 course website.</p>
+
+        <section class="page-intro">
+            <p class="eyebrow">Midnight Mustang Garage - Technical Guide</p>
+
+            <p>
+                Learn the basics of automotive maintenance,
+                inspections, and modifications with our
+                Midnight Mustang Garage technical guide.
+            </p>
+        </section>
+
+        <!-- The doc-layout class places the documentation navigation beside the guide. -->
+        <div class="doc-layout">
+
+            <!-- The navbar id identifies the navigation menu for the documentation project. -->
+            <nav id="navbar" aria-label="Documentation Navigation">
+
+                <header>Garage Technical Guide</header>
+
+                <a class="nav-link" href="#getting_started">
+                    Getting Started
+                </a>
+
+                <a class="nav-link" href="#safety">
+                    Safety Guidelines
+                </a>
+
+                <a class="nav-link" href="#inspection">
+                    Vehicle Inspection
+                </a>
+
+                <a class="nav-link" href="#wheels">
+                    Wheels And Tires
+                </a>
+
+                <a class="nav-link" href="#brakes">
+                    Brake System
+                </a>
+
+                <a class="nav-link" href="#suspension">
+                    Suspension System
+                </a>
+
+                <a class="nav-link" href="#maintenance">
+                    Maintenance Records
+                </a>
+
+            </nav>
+
+            <!-- The main-doc id identifies the primary documentation content. -->
+            <div id="main-doc">
+
+                <!-- Each main-section class creates a separate documentation topic. -->
+                <section class="main-section" id="getting_started">
+
+                    <h3>Getting Started</h3>
+
+                    <p>
+                        Before beginning an automotive project,
+                        identify the problem or improvement you
+                        want to make. Research your vehicle and
+                        gather the correct tools.
+                    </p>
+
+                    <p>
+                        Always confirm that replacement parts
+                        match your vehicle's year, make, model,
+                        and trim.
+                    </p>
+
+                    <pre><code>Project Preparation:
+
+1. Identify the project.
+2. Research the vehicle.
+3. Gather the correct tools.
+4. Read the service manual.
+5. Prepare the workspace.</code></pre>
+
+                </section>
+
+                <section class="main-section" id="safety">
+
+                    <h3>Safety Guidelines</h3>
+
+                    <p>
+                        Safety should always come first when
+                        working on a vehicle. Automotive repairs
+                        can involve heavy equipment, electricity,
+                        chemicals, and moving parts.
+                    </p>
+
+                    <ul>
+                        <li>Wear safety glasses and gloves.</li>
+                        <li>Work on a stable, level surface.</li>
+                        <li>Use properly rated jack stands.</li>
+                        <li>Keep the workspace clean.</li>
+                        <li>Follow the manufacturer's instructions.</li>
+                    </ul>
+
+                </section>
+
+                <section class="main-section" id="inspection">
+
+                    <h3>Vehicle Inspection</h3>
+
+                    <p>
+                        Regular inspections help identify problems
+                        before they become expensive repairs.
+                        Check the vehicle's exterior and mechanical
+                        components regularly.
+                    </p>
+
+                    <ol>
+                        <li>Check for fluid leaks.</li>
+                        <li>Inspect the tires.</li>
+                        <li>Check exterior lights.</li>
+                        <li>Inspect visible belts and hoses.</li>
+                        <li>Look for unusual noises or vibrations.</li>
+                    </ol>
+
+                </section>
+
+                <section class="main-section" id="wheels">
+
+                    <h3>Wheels And Tires</h3>
+
+                    <p>
+                        Wheels and tires affect handling,
+                        traction, and vehicle appearance.
+                        Always use the correct wheel specifications
+                        for your vehicle.
+                    </p>
+
+                    <p>
+                        Check tire pressure regularly and follow
+                        the recommended pressure listed on the
+                        vehicle's door-jamb placard.
+                    </p>
+
+                    <pre><code>Wheel Inspection:
+
+1. Check tire pressure.
+2. Inspect tread depth.
+3. Look for sidewall damage.
+4. Check wheel condition.
+5. Follow the specified lug nut torque.</code></pre>
+
+                </section>
+
+                <section class="main-section" id="brakes">
+
+                    <h3>Brake System</h3>
+
+                    <p>
+                        The braking system is one of the most
+                        important safety systems on a vehicle.
+                        Regularly inspect brake pads, rotors,
+                        brake lines, and brake fluid.
+                    </p>
+
+                    <p>
+                        If you notice grinding noises, fluid leaks,
+                        or a soft brake pedal, have the vehicle
+                        inspected before driving.
+                    </p>
+
+                </section>
+
+                <section class="main-section" id="suspension">
+
+                    <h3>Suspension System</h3>
+
+                    <p>
+                        The suspension system helps maintain
+                        vehicle stability, ride comfort, and
+                        tire contact with the road.
+                    </p>
+
+                    <p>
+                        Suspension modifications can change
+                        ride height and handling. After installing
+                        suspension components, inspect clearances
+                        and have the vehicle professionally aligned.
+                    </p>
+
+                    <p>
+                        Coil springs store significant energy.
+                        Always use appropriate equipment and
+                        manufacturer-approved procedures.
+                    </p>
+
+                </section>
+
+                <section class="main-section" id="maintenance">
+
+                    <h3>Maintenance Records</h3>
+
+                    <p>
+                        Keeping maintenance records makes it
+                        easier to track repairs and identify
+                        recurring problems.
+                    </p>
+
+                    <pre><code>Maintenance Record:
+
+Date:
+Vehicle Mileage:
+Service Performed:
+Parts Replaced:
+Additional Notes:</code></pre>
+
+                    <p>
+                        Maintaining accurate records can also
+                        help when selling or servicing your vehicle.
+                    </p>
+
+                </section>
+
+            </div>
+
+        </div>
+
     </main>
     <hr>
    <div data-include="components/footer.html"></div>

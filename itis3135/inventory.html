@@ -12,14 +12,139 @@
 </head>
 <body>
     <div data-include="components/header.html"></div>
-    <main>
+ <main class="garage-page">
+
         <h2>Inventory Page</h2>
-        <!-- The feature-photo class lets the stylesheet control the image's size and placement. -->
-        <figure class="feature-photo">
-            <img src="images/me-and-deer.jpg" alt="Feature photo">
-        </figure>
-        <h3>Inventory Page</h3>
-        <p>This is the inventory page for my ITIS3135 course website.</p>
+
+        <section class="page-intro">
+            <p class="eyebrow">Midnight Mustang Garage - Parts Department</p>
+
+            <p>
+                Welcome to our garage inventory! Browse our selection
+                of automotive tools, detailing supplies, and accessories
+                for your next vehicle project.
+            </p>
+        </section>
+
+        <!-- The content-panel class groups the inventory table into one section. -->
+        <section class="content-panel">
+
+            <h3>Available Garage Products</h3>
+
+            <table>
+
+                <caption>Midnight Mustang Garage Inventory</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Availability</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Microfiber Towel Set</td>
+                        <td>Detailing</td>
+                        <td>$18.00</td>
+                        <td><span class="status">In Stock</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Car Wash Soap</td>
+                        <td>Detailing</td>
+                        <td>$14.50</td>
+                        <td><span class="status">In Stock</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Wheel Brush Kit</td>
+                        <td>Detailing</td>
+                        <td>$22.00</td>
+                        <td><span class="status low">Low Stock</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>LED Garage Work Light</td>
+                        <td>Tools</td>
+                        <td>$39.99</td>
+                        <td><span class="status">In Stock</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Mechanic Tool Set</td>
+                        <td>Tools</td>
+                        <td>$75.00</td>
+                        <td><span class="status low">Low Stock</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Magnetic Parts Tray</td>
+                        <td>Tools</td>
+                        <td>$9.50</td>
+                        <td><span class="status">In Stock</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Valve Stem Cap Set</td>
+                        <td>Accessories</td>
+                        <td>$7.00</td>
+                        <td><span class="status out">Out Of Stock</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Garage Wall Banner</td>
+                        <td>Accessories</td>
+                        <td>$24.00</td>
+                        <td><span class="status">In Stock</span></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <p class="muted">
+                All prices and inventory quantities are fictional
+                and provided for this classroom project.
+            </p>
+
+        </section>
+
+        <!-- The grid class arranges the three inventory category cards into columns. -->
+        <section class="grid">
+
+            <article class="info-card">
+                <h3>Detailing Supplies</h3>
+
+                <p>
+                    Keep your vehicle clean with microfiber towels,
+                    washing products, and detailing brushes.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <h3>Garage Tools</h3>
+
+                <p>
+                    Organize your workspace with dependable tools
+                    and equipment for automotive projects.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <h3>Automotive Accessories</h3>
+
+                <p>
+                    Find finishing touches that help customize
+                    the appearance of your vehicle.
+                </p>
+            </article>
+
+        </section>
+
     </main>
     <hr>
    <div data-include="components/footer.html"></div>
