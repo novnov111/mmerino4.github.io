@@ -12,14 +12,175 @@
 </head>
 <body>
     <div data-include="components/header.html"></div>
-    <main>
+     <main class="garage-page">
+
         <h2>Product Page</h2>
-        <!-- The feature-photo class lets the stylesheet control the image's size and placement. -->
-        <figure class="feature-photo">
-            <img src="images/me-and-deer.jpg" alt="Feature photo">
-        </figure>
-        <h3>Product Page</h3>
-        <p>This is the product page for my ITIS3135 course website.</p>
+
+        <!-- The nav id identifies the product page navigation menu. -->
+        <nav id="nav" aria-label="Product Navigation">
+
+            <a href="#features">Features</a> |
+            <a href="#video-section">Video</a> |
+            <a href="#updates">Updates</a>
+
+        </nav>
+
+        <section class="page-intro">
+
+            <p class="eyebrow">
+                Midnight Mustang Garage - Featured Product
+            </p>
+
+            <h3>Midnight Finish Detailing Kit</h3>
+
+            <p>
+                Keep your vehicle looking its best with the
+                Midnight Finish Detailing Kit. Our fictional
+                garage product brings together essential
+                cleaning supplies for automotive enthusiasts.
+            </p>
+
+        </section>
+
+        <!-- The product-hero class places the product description beside its image. -->
+        <section class="product-panel product-hero">
+
+            <div>
+
+                <span class="tag">Garage Favorite</span>
+
+                <h3>Bring Back The Shine</h3>
+
+                <p>
+                    The Midnight Finish Kit includes essential
+                    detailing supplies to help clean and maintain
+                    your vehicle's exterior.
+                </p>
+
+                <p class="price">$59.00</p>
+
+                <a class="button-link" href="#updates">
+                    Get Product Updates
+                </a>
+
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                alt="Car being carefully washed during a detailing session">
+
+        </section>
+
+        <!-- The features id identifies the product features section. -->
+        <section class="content-panel" id="features">
+
+            <h3>What's Included?</h3>
+
+            <!-- The grid class organizes the three product features into columns. -->
+            <div class="grid">
+
+                <article class="product-feature">
+
+                    <h3>Car Wash Soap</h3>
+
+                    <p>
+                        Quality washing soap helps remove dirt
+                        and grime from your vehicle's exterior.
+                    </p>
+
+                </article>
+
+                <article class="product-feature">
+
+                    <h3>Microfiber Towels</h3>
+
+                    <p>
+                        Soft microfiber towels help dry and
+                        detail vehicle surfaces.
+                    </p>
+
+                </article>
+
+                <article class="product-feature">
+
+                    <h3>Detailing Brush</h3>
+
+                    <p>
+                        A detailing brush helps reach small
+                        spaces around badges, trim, and wheels.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- The video-section id identifies the product demonstration video. -->
+        <section class="content-panel" id="video-section">
+
+            <h3>Watch The Detailing Process</h3>
+
+            <p>
+                Learn about automotive detailing and how
+                to maintain a clean vehicle.
+            </p>
+
+            <iframe
+                id="video"
+                class="video-frame"
+                src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4"
+                title="Automotive Product Demonstration Video"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+
+        </section>
+
+        <!-- The updates id identifies the email signup section. -->
+        <section class="product-panel" id="updates">
+
+            <h3>Get Garage Updates</h3>
+
+            <p>
+                Enter your email address to receive updates
+                about new products and automotive projects.
+            </p>
+
+            <form id="form"
+                action="https://www.freecodecamp.com/email-submit"
+                method="post">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="example@email.com"
+                        required>
+
+                </div>
+
+                <input
+                    id="submit"
+                    type="submit"
+                    value="Sign Up">
+
+            </form>
+
+            <p class="muted">
+                This is a classroom demonstration product.
+            </p>
+
+        </section>
+
     </main>
     <hr>
    <div data-include="components/footer.html"></div>
