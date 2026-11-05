@@ -17,16 +17,35 @@
         <h2>Inventory Page</h2>
 
         <section class="page-intro">
-            <p class="eyebrow">Midnight Mustang Garage - Parts Department</p>
+
+            <p class="eyebrow">
+                Midnight Mustang Garage - Parts Department
+            </p>
 
             <p>
                 Welcome to our garage inventory! Browse our selection
                 of automotive tools, detailing supplies, and accessories
                 for your next vehicle project.
             </p>
+
         </section>
 
-        <!-- The content-panel class groups the inventory table into one section. -->
+        <!-- The inventory-image class centers the automotive image
+             and controls its size within the page. -->
+        <figure class="inventory-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                alt="Automotive engine components displayed in a workshop">
+
+            <figcaption>
+                Midnight Mustang Garage - Automotive Parts And Equipment
+            </figcaption>
+
+        </figure>
+
+        <!-- The content-panel class groups the inventory table
+             and gives it consistent spacing and presentation. -->
         <section class="content-panel">
 
             <h3>Available Garage Products</h3>
@@ -50,56 +69,74 @@
                         <td>Microfiber Towel Set</td>
                         <td>Detailing</td>
                         <td>$18.00</td>
-                        <td><span class="status">In Stock</span></td>
+                        <td>
+                            <!-- The span element displays the inventory status inline.
+                                 The status class provides consistent status styling. -->
+                            <span class="status">In Stock</span>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Car Wash Soap</td>
                         <td>Detailing</td>
                         <td>$14.50</td>
-                        <td><span class="status">In Stock</span></td>
+                        <td>
+                            <span class="status">In Stock</span>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Wheel Brush Kit</td>
                         <td>Detailing</td>
                         <td>$22.00</td>
-                        <td><span class="status low">Low Stock</span></td>
+                        <td>
+                            <span class="status low">Low Stock</span>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>LED Garage Work Light</td>
                         <td>Tools</td>
                         <td>$39.99</td>
-                        <td><span class="status">In Stock</span></td>
+                        <td>
+                            <span class="status">In Stock</span>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Mechanic Tool Set</td>
                         <td>Tools</td>
                         <td>$75.00</td>
-                        <td><span class="status low">Low Stock</span></td>
+                        <td>
+                            <span class="status low">Low Stock</span>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Magnetic Parts Tray</td>
                         <td>Tools</td>
                         <td>$9.50</td>
-                        <td><span class="status">In Stock</span></td>
+                        <td>
+                            <span class="status">In Stock</span>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Valve Stem Cap Set</td>
                         <td>Accessories</td>
                         <td>$7.00</td>
-                        <td><span class="status out">Out Of Stock</span></td>
+                        <td>
+                            <span class="status out">Out Of Stock</span>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Garage Wall Banner</td>
                         <td>Accessories</td>
                         <td>$24.00</td>
-                        <td><span class="status">In Stock</span></td>
+                        <td>
+                            <span class="status">In Stock</span>
+                        </td>
                     </tr>
 
                 </tbody>
@@ -113,34 +150,41 @@
 
         </section>
 
-        <!-- The grid class arranges the three inventory category cards into columns. -->
+        <!-- The grid div groups the three category cards together.
+             The grid class creates responsive columns for the cards. -->
         <section class="grid">
 
             <article class="info-card">
+
                 <h3>Detailing Supplies</h3>
 
                 <p>
                     Keep your vehicle clean with microfiber towels,
                     washing products, and detailing brushes.
                 </p>
+
             </article>
 
             <article class="info-card">
+
                 <h3>Garage Tools</h3>
 
                 <p>
                     Organize your workspace with dependable tools
                     and equipment for automotive projects.
                 </p>
+
             </article>
 
             <article class="info-card">
+
                 <h3>Automotive Accessories</h3>
 
                 <p>
                     Find finishing touches that help customize
                     the appearance of your vehicle.
                 </p>
+
             </article>
 
         </section>
