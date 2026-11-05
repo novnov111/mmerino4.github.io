@@ -16,7 +16,15 @@
 
         <h2>Survey Page</h2>
 
+        <!-- The survey-image class centers the automotive image above the survey form. -->
+        <figure class="survey-image">
+            <img
+                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                alt="Sports car displayed outdoors">
+        </figure>
+
         <section class="page-intro">
+
             <p class="eyebrow">Midnight Mustang Garage - Driver Profile</p>
 
             <p>
@@ -25,17 +33,19 @@
                 interests. Your answers help us understand what
                 car enthusiasts enjoy most.
             </p>
+
         </section>
 
-        <!-- The form-panel class separates the survey from the rest of the page. -->
+        <!-- The form-panel class styles the survey container and keeps its text readable. -->
         <section class="form-panel">
 
             <h3>Driver Information</h3>
 
             <form id="survey-form" action="#" method="get">
 
-                <!-- The form-group class keeps each question and input together. -->
+                <!-- The form-group class groups each question and its input for consistent spacing. -->
                 <div class="form-group">
+
                     <label id="name-label" for="name">
                         Full Name
                     </label>
@@ -46,9 +56,11 @@
                         type="text"
                         placeholder="Enter your full name"
                         required>
+
                 </div>
 
                 <div class="form-group">
+
                     <label id="email-label" for="email">
                         Email Address
                     </label>
@@ -59,9 +71,11 @@
                         type="email"
                         placeholder="example@email.com"
                         required>
+
                 </div>
 
                 <div class="form-group">
+
                     <label id="number-label" for="number">
                         Years Of Driving Experience
                     </label>
@@ -73,14 +87,17 @@
                         min="0"
                         max="100"
                         placeholder="Example: 5">
+
                 </div>
 
                 <div class="form-group">
+
                     <label for="vehicle">
                         What Type Of Vehicle Do You Drive?
                     </label>
 
                     <select id="vehicle" name="vehicle" required>
+
                         <option value="" disabled selected>
                             Select Your Vehicle
                         </option>
@@ -91,63 +108,98 @@
                         <option value="suv">SUV</option>
                         <option value="sedan">Sedan</option>
                         <option value="other">Other</option>
+
                     </select>
+
                 </div>
 
                 <fieldset>
+
                     <legend>How Experienced Are You With Cars?</legend>
 
                     <label>
-                        <input type="radio" name="experience" value="beginner" required>
+                        <input
+                            type="radio"
+                            name="experience"
+                            value="beginner"
+                            required>
                         Beginner
                     </label>
 
                     <label>
-                        <input type="radio" name="experience" value="intermediate">
+                        <input
+                            type="radio"
+                            name="experience"
+                            value="intermediate">
                         Intermediate
                     </label>
 
                     <label>
-                        <input type="radio" name="experience" value="advanced">
+                        <input
+                            type="radio"
+                            name="experience"
+                            value="advanced">
                         Advanced
                     </label>
+
                 </fieldset>
 
                 <fieldset>
+
                     <legend>Which Automotive Topics Interest You?</legend>
 
                     <label>
-                        <input type="checkbox" name="interests" value="performance">
+                        <input
+                            type="checkbox"
+                            name="interests"
+                            value="performance">
                         Engine Performance
                     </label>
 
                     <label>
-                        <input type="checkbox" name="interests" value="wheels">
+                        <input
+                            type="checkbox"
+                            name="interests"
+                            value="wheels">
                         Wheels And Tires
                     </label>
 
                     <label>
-                        <input type="checkbox" name="interests" value="suspension">
+                        <input
+                            type="checkbox"
+                            name="interests"
+                            value="suspension">
                         Suspension Upgrades
                     </label>
 
                     <label>
-                        <input type="checkbox" name="interests" value="detailing">
+                        <input
+                            type="checkbox"
+                            name="interests"
+                            value="detailing">
                         Car Detailing
                     </label>
 
                     <label>
-                        <input type="checkbox" name="interests" value="appearance">
+                        <input
+                            type="checkbox"
+                            name="interests"
+                            value="appearance">
                         Exterior Styling
                     </label>
 
                     <label>
-                        <input type="checkbox" name="interests" value="maintenance">
+                        <input
+                            type="checkbox"
+                            name="interests"
+                            value="maintenance">
                         Vehicle Maintenance
                     </label>
+
                 </fieldset>
 
                 <div class="form-group">
+
                     <label for="next-upgrade">
                         What Modification Would You Like To Make Next?
                     </label>
@@ -157,21 +209,26 @@
                         name="next-upgrade"
                         rows="5"
                         placeholder="Tell us about your next project..."></textarea>
+
                 </div>
 
                 <div class="form-group">
+
                     <label for="recommendation">
                         How Did You Hear About Midnight Mustang Garage?
                     </label>
 
                     <select id="recommendation" name="recommendation">
+
                         <option value="">Select An Option</option>
                         <option value="search">Search Engine</option>
                         <option value="social">Social Media</option>
                         <option value="friend">Friend Or Family</option>
                         <option value="event">Car Meet</option>
                         <option value="other">Other</option>
+
                     </select>
+
                 </div>
 
                 <p class="help-text">
@@ -179,12 +236,17 @@
                     Your information is not stored.
                 </p>
 
-                <input id="submit" type="submit" value="Submit Survey">
+                <input
+                    id="submit"
+                    type="submit"
+                    value="Submit Survey">
 
             </form>
+
         </section>
 
     </main>
+
 
     <hr>
    <div data-include="components/footer.html"></div>

@@ -94,6 +94,69 @@ footer p {
     margin: 8px 0;
 }
 
+/* Survey page styling - preserves the original Midnight Mustang theme. */
+
+/* Keeps the survey image centered. */
+.survey-image {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.survey-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Keeps the form background consistent with the original gray theme. */
+.form-panel {
+    background-color: #848493;
+    color: #7e4c1e;
+    padding: 15px;
+}
+
+/* Keeps survey headings in the original dark brown. */
+.form-panel h3 {
+    color: #3d2b2b;
+}
+
+/* Keeps labels and descriptions in the original brown. */
+.form-panel p,
+.form-panel label,
+.form-panel legend {
+    color: #7e4c1e;
+}
+
+/* Removes the white backgrounds from form controls. */
+.form-panel input,
+.form-panel select,
+.form-panel textarea {
+    background-color: #848493;
+    color: #3d2b2b;
+    border: 1px solid #3d2b2b;
+}
+
+/* Makes placeholder text readable. */
+.form-panel input::placeholder,
+.form-panel textarea::placeholder {
+    color: #3d2b2b;
+}
+
+/* Keeps fieldsets consistent with the original background. */
+.form-panel fieldset {
+    background-color: #848493;
+    color: #7e4c1e;
+    border: 2px solid #3d2b2b;
+}
+
+/* Separates individual survey questions. */
+.form-group {
+    margin-bottom: 18px;
+}
+
+
 @media (max-width: 600px) { 
     body { 
         padding: 15px; 
