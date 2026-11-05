@@ -168,4 +168,157 @@ footer p {
         display: inline-block; 
         padding: 5px; 
     }
+
+    
+
+        /* =========================================
+        MIDNIGHT MUSTANG TRADING CARD STYLES
+        ========================================= */
+
+        /* Introduction paragraph */
+        .brand-intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 20px auto 30px;
+            line-height: 1.6;
+        }
+
+        /* Card collection layout */
+        .card-row {
+            list-style: none;
+            padding: 0;
+            margin: 25px auto;
+            max-width: 950px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        /* Individual trading cards */
+        .mustang-card {
+            position: relative;
+            background-color: #e9e1d2;
+            color: #3d2b2b;
+            border: 3px solid #704326;
+            border-radius: 14px;
+            padding: 15px;
+            min-height: 390px;
+            text-align: center;
+            box-shadow: 4px 5px 0 #5c4638;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Rarity badge */
+        .rarity {
+            align-self: flex-start;
+            background-color: #704326;
+            color: #f2eee5;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+
+        /* Illustration area */
+        .mustang-card figure {
+            width: 100%;
+            height: 125px;
+            margin: 20px 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #d4c9b7;
+            border: 2px solid #a18a6d;
+            border-radius: 8px;
+        }
+
+        .car-art {
+            width: 100%;
+            max-width: 190px;
+            height: 115px;
+        }
+
+        /* Card title */
+        .card-title {
+            color: #7e4c1e;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.15em;
+            margin: 8px 0 4px;
+        }
+
+        /* Card subtitle */
+        .car-subtitle {
+            color: #704326;
+            font-style: italic;
+            font-size: 0.85em;
+            margin: 0 0 12px;
+        }
+
+        /* Specifications */
+        .card-details {
+            width: 100%;
+            margin: 5px 0 0;
+            text-align: left;
+            font-size: 0.85em;
+        }
+
+        .card-details dt {
+            font-weight: bold;
+            color: #704326;
+            margin-top: 8px;
+        }
+
+        .card-details dd {
+            margin: 3px 0 6px;
+        }
+
+        /* Performance rating bars */
+        .meter {
+            height: 10px;
+            width: 100%;
+            background-color: #c4b9a8;
+            border: 1px solid #704326;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .meter span {
+            display: block;
+            height: 100%;
+            background-color: #8b4d2e;
+            border-radius: 10px;
+        }
+
+        .fill-40 { width: 40%; }
+        .fill-60 { width: 60%; }
+        .fill-80 { width: 80%; }
+        .fill-85 { width: 85%; }
+        .fill-90 { width: 90%; }
+        .fill-95 { width: 95%; }
+        .fill-100 { width: 100%; }
+
+        /* Closing message */
+        .cards-note {
+            text-align: center;
+            margin: 30px auto;
+            color: #3d2b2b;
+        }
+
+        /* Tablet layout */
+        @media (max-width: 750px) {
+            .card-row {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* Phone layout */
+        @media (max-width: 480px) {
+            .card-row {
+                grid-template-columns: 1fr;
+                max-width: 320px;
+            }
+        }
  }
