@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Merino's Midnight Mustang | ITIS3135 | Everything Images</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <!-- div: placeholder that loads the shared header -->
+        <div data-include="components/header.html"></div>
+        <hr>
+        <main>
+            <h2>Everything Images</h2>
+            <p>This page demonstrates the correct ways to handle images on a website, and how not to do it. Using two photos, one from Pexels.com and one I took myself, it compares image formats (JPG, GIF, greyscale, and black and white), resizing an image with CSS versus resizing it in an image editor, what happens when an image is stretched out of proportion, and why enlarging a small image with CSS makes it look blurry.</p>
+ 
+            <section>
+                <h3>Demonstrating Image Manipulation with an Amsterdam Canal Photo from Pexels.com</h3>
+                <p>I picked this photo for its fine detail: window frames, brickwork and rippled reflections. It was taken by Mehmet Çetinkaya (ADD A FACT ABOUT HIM FROM HIS PEXELS PROFILE). It shows tall, narrow canal houses lit by evening sun, reflected in the water beside two tour boats. The original is a JPG that is 1932 x 2576 pixels and 0.74 MB.</p>
+ 
+                <article>
+                    <h4>Original Image</h4>
+                    <p>
+                        <a href="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels.jpg" target="_blank">Original Image (JPG)</a> |
+                        <a href="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels.gif" target="_blank">Original Image as a GIF</a> |
+                        <a href="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels-greyscale.jpg" target="_blank">Original Image in Greyscale</a> |
+                        <a href="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels-black-and-white.png" target="_blank">Original Image in Black and White</a>
+                    </p>
+                </article>
+ 
+                <article>
+                    <h4>Downsizing Images with CSS</h4>
+                    <figure>
+                        <!-- inline style: shrinks the full-size original with CSS width only (browser keeps proportions); the assignment requires inline CSS here -->
+                        <img src="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels.jpg" alt="Amsterdam canal houses reflected in the water" style="width: 290px;">
+                        <figcaption>The full 1932 x 2576 original shrunk to about 15% (290 x 387) with inline CSS.</figcaption>
+                    </figure>
+                </article>
+ 
+                <article>
+                    <h4>Proper Reduction of Image with Editor</h4>
+                    <figure>
+                        <img src="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels-450x600.jpg" alt="Amsterdam canal houses reflected in the water, resized to 450 by 600" width="450" height="600">
+                        <figcaption>Resized to 450 x 600 in an image editor.</figcaption>
+                    </figure>
+                </article>
+ 
+                <article>
+                    <h4>Improper Image Proportions with CSS</h4>
+                    <!-- div with class image-row: groups the figures so they sit side by side; the image-row class is styled in default.css -->
+                    <div class="image-row">
+                        <figure>
+                            <img src="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels-450x402.jpg" alt="Amsterdam canal houses reflected in the water squashed vertically to 450 by 402" width="225" height="201">
+                            <figcaption>450 x 402: height cut by 33%.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels-450x269.jpg" alt="Amsterdam canal houses reflected in the water squashed vertically to 450 by 269" width="225" height="135">
+                            <figcaption>450 x 269: height cut by 33% again.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels-302x600.jpg" alt="Amsterdam canal houses reflected in the water squeezed horizontally to 302 by 600" width="151" height="300">
+                            <figcaption>302 x 600: width cut by 33%.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels-202x600.jpg" alt="Amsterdam canal houses reflected in the water squeezed horizontally to 202 by 600" width="101" height="300">
+                            <figcaption>202 x 600: width cut by 33% again.</figcaption>
+                        </figure>
+                    </div>
+                </article>
+ 
+                <article>
+                    <h4>Improper Enlarging with CSS</h4>
+                    <!-- div with class image-row: groups the figures so they sit side by side; the image-row class is styled in default.css -->
+                    <div class="image-row">
+                        <figure>
+                            <img src="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels-450x600.jpg" alt="Amsterdam canal houses reflected in the water at 450 by 600, displayed smaller" width="300" height="400">
+                            <figcaption>The 450 x 600 version, displayed at 300 x 400.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/amsterdam-canal-houses-2156651176@mehmet-cetinkaya_pexels-112x150.jpg" alt="Amsterdam canal houses reflected in the water at 112 by 150, stretched larger" width="300" height="400">
+                            <figcaption>The 112 x 150 version (25%), stretched to the same 300 x 400.</figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+ 
+            <hr>
+ 
+            <section>
+                <h3>Demonstrating Image Manipulation with My Own Pumpkin Bucket Geometry Photo</h3>
+                <p>I took this photo myself on November 10, 2026 at ADD LOCATION. The pumpkin bucket’s opening is a near circle, shot from directly above with my shoes in the frame. The original is a JPG that is 2576 x 2576 pixels and 0.92 MB.</p>
+ 
+                <article>
+                    <h4>Original Image</h4>
+                    <p>
+                        <a href="images/pumpkin-bucket-next-to-feet@michael-merino.jpg" target="_blank">Original Image (JPG)</a> |
+                        <a href="images/pumpkin-bucket-next-to-feet@michael-merino.gif" target="_blank">Original Image as a GIF</a> |
+                        <a href="images/pumpkin-bucket-next-to-feet@michael-merino-greyscale.jpg" target="_blank">Original Image in Greyscale</a> |
+                        <a href="images/pumpkin-bucket-next-to-feet@michael-merino-black-and-white.png" target="_blank">Original Image in Black and White</a>
+                    </p>
+                </article>
+ 
+                <article>
+                    <h4>Downsizing Images with CSS</h4>
+                    <figure>
+                        <!-- inline style: shrinks the full-size original with CSS width only (browser keeps proportions); the assignment requires inline CSS here -->
+                        <img src="images/pumpkin-bucket-next-to-feet@michael-merino.jpg" alt="Orange pumpkin bucket full of candy next to my shoes" style="width: 386px;">
+                        <figcaption>The full 2576 x 2576 original shrunk to about 15% (386 x 386) with inline CSS.</figcaption>
+                    </figure>
+                </article>
+ 
+                <article>
+                    <h4>Proper Reduction of Image with Editor</h4>
+                    <figure>
+                        <img src="images/pumpkin-bucket-next-to-feet@michael-merino-500x500.jpg" alt="Orange pumpkin bucket full of candy next to my shoes, resized to 500 by 500" width="500" height="500">
+                        <figcaption>Resized to 500 x 500 in an image editor.</figcaption>
+                    </figure>
+                </article>
+ 
+                <article>
+                    <h4>Improper Image Proportions with CSS</h4>
+                    <!-- div with class image-row: groups the figures so they sit side by side; the image-row class is styled in default.css -->
+                    <div class="image-row">
+                        <figure>
+                            <img src="images/pumpkin-bucket-next-to-feet@michael-merino-500x335.jpg" alt="Orange pumpkin bucket full of candy next to my shoes squashed vertically to 500 by 335" width="250" height="168">
+                            <figcaption>500 x 335: height cut by 33%.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/pumpkin-bucket-next-to-feet@michael-merino-500x224.jpg" alt="Orange pumpkin bucket full of candy next to my shoes squashed vertically to 500 by 224" width="250" height="112">
+                            <figcaption>500 x 224: height cut by 33% again.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/pumpkin-bucket-next-to-feet@michael-merino-335x500.jpg" alt="Orange pumpkin bucket full of candy next to my shoes squeezed horizontally to 335 by 500" width="168" height="250">
+                            <figcaption>335 x 500: width cut by 33%.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/pumpkin-bucket-next-to-feet@michael-merino-224x500.jpg" alt="Orange pumpkin bucket full of candy next to my shoes squeezed horizontally to 224 by 500" width="112" height="250">
+                            <figcaption>224 x 500: width cut by 33% again.</figcaption>
+                        </figure>
+                    </div>
+                </article>
+ 
+                <article>
+                    <h4>Improper Enlarging with CSS</h4>
+                    <!-- div with class image-row: groups the figures so they sit side by side; the image-row class is styled in default.css -->
+                    <div class="image-row">
+                        <figure>
+                            <img src="images/pumpkin-bucket-next-to-feet@michael-merino-500x500.jpg" alt="Orange pumpkin bucket full of candy next to my shoes at 500 by 500, displayed smaller" width="300" height="300">
+                            <figcaption>The 500 x 500 version, displayed at 300 x 300.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/pumpkin-bucket-next-to-feet@michael-merino-125x125.jpg" alt="Orange pumpkin bucket full of candy next to my shoes at 125 by 125, stretched larger" width="300" height="300">
+                            <figcaption>The 125 x 125 version (25%), stretched to the same 300 x 300.</figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <hr>
+        <!-- div: placeholder that loads the shared footer -->
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+    </body>
+</html>
