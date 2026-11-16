@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Michael Merino's Midnight Mustang | ITIS3135 | Introduction Form</title>
+
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/introduction-form.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- Standards checker must appear before the Accumulus script. -->
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+
+    <!-- Accumulus checker is the last script in the head. -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div data-include="components/header.html"></div>
+
+    <!-- Div explanation: each div wraps one label and its input (class form-group) so spacing can be styled per field,
+         and the course-list div is a container that JavaScript fills with course rows (class course-row), each in its own div.
+         The footer-slot, start-over, and output-area divs are empty targets that the JavaScript fills after submit or when a Generate button is clicked.
+         Class and id explanation: the form-group, form-panel, button-row, and form-preview classes are styling hooks in introduction-form.css;
+         each id (first-name, course-list, footer-slot, and so on) pairs a label with its input or lets introduction.js find that element.
+         No span elements are used. -->
+
+    <main>
+
+        <h2>Introduction Form</h2>
+
+        <h3>Please Submit the Form Below.</h3>
+
+        <form id="form" class="form-panel">
+
+            <fieldset>
+                <legend>Name and Mascot</legend>
+
+                <div class="form-group">
+                    <label for="first-name">First name</label>
+                    <input id="first-name" name="firstName" type="text" value="Michael" placeholder="First name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="middle-name">Middle name or initial (optional)</label>
+                    <input id="middle-name" name="middleName" type="text" value="" placeholder="Middle name or initial">
+                </div>
+
+                <div class="form-group">
+                    <label for="nickname">Nickname / preferred name (optional)</label>
+                    <input id="nickname" name="nickname" type="text" value="Mike" placeholder="Nickname">
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last name</label>
+                    <input id="last-name" name="lastName" type="text" value="Merino" placeholder="Last name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="acknowledgment">Acknowledgment statement</label>
+                    <input id="acknowledgment" name="acknowledgment" type="text" value="I understand that this is a public document, and I won't put anything here I wouldn't want anyone to see." placeholder="Acknowledgment statement" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="acknowledgment-date">Acknowledgment date</label>
+                    <input id="acknowledgment-date" name="acknowledgmentDate" type="date" value="2026-11-15" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adjectives">Mascot adjective</label>
+                    <input id="adjectives" name="adjectives" type="text" value="Midnight" placeholder="Adjective" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="animal">Mascot animal</label>
+                    <input id="animal" name="animal" type="text" value="Mustang" placeholder="Animal" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="divider">Divider symbol (such as a tilde, a vertical bar, or a heart)</label>
+                    <input id="divider" name="prettyNameDivider" type="text" value="|" placeholder="Divider" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Picture</legend>
+
+                <div class="form-group">
+                    <label for="picture-upload">Upload a picture (optional, replaces the default picture)</label>
+                    <input id="picture-upload" name="pictureUpload" type="file" accept="image/*">
+                </div>
+
+                <div class="form-group form-preview">
+                    <img id="picture-preview" src="images/me-in-brazil.jpg" alt="Preview of the picture that will be used">
+                </div>
+
+                <div class="form-group">
+                    <label for="picture-alt">Picture description (alt text)</label>
+                    <input id="picture-alt" name="pictureAlt" type="text" value="Michael in Brazil" placeholder="Describe the picture" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="caption">Picture caption</label>
+                    <input id="caption" name="caption" type="text" value="Michael Merino in Brazil" placeholder="Picture caption" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>About Me</legend>
+
+                <div class="form-group">
+                    <label for="statement">Personal statement</label>
+                    <textarea id="statement" name="statement" rows="4" placeholder="Write your personal statement" required>My name is Michael, this is my third semester at UNCC. I have multiple hobbies but I can never master any of them. During my free time I like to work on my car, play chess, and finish my homework.</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="personal-background">Personal background</label>
+                    <textarea id="personal-background" name="personalBackground" rows="2" placeholder="Personal background" required>I was born in California but grew up in NC since I was a little kid.</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="professional-background">Professional background</label>
+                    <textarea id="professional-background" name="professionalBackground" rows="2" placeholder="Professional background" required>I used to be a Marine.</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="academic-background">Academic background</label>
+                    <textarea id="academic-background" name="academicBackground" rows="2" placeholder="Academic background" required>Computer Science, projected graduation date 2027</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="work-computer">Primary work computer (type, OS, and version)</label>
+                    <textarea id="work-computer" name="primaryWorkComputer" rows="2" placeholder="Primary work computer" required>Dell Spectre XP</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="work-location">Primary work location</label>
+                    <textarea id="work-location" name="primaryWorkLocation" rows="2" placeholder="Primary work location" required>In my apartment or VA lounge</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="alternate-location">Alternate computer &amp; location</label>
+                    <textarea id="alternate-location" name="alternateComputerLocation" rows="2" placeholder="Alternate computer and location" required>Costume old PC I built</textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Courses I'm Taking, &amp; Why</legend>
+
+                <div id="course-list"></div>
+
+                <button id="add-course" type="button">Add Course</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quote and Extras</legend>
+
+                <div class="form-group">
+                    <label for="quote">Quote</label>
+                    <textarea id="quote" name="quote" rows="2" placeholder="A favorite quote" required>I have multiple hobbies but I can never master any of them.</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="quote-author">Quote author</label>
+                    <input id="quote-author" name="quoteAuthor" type="text" value="Michael Merino" placeholder="Quote author" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="funny-item">Funny thing (optional)</label>
+                    <textarea id="funny-item" name="funnyItem" rows="2" placeholder="Something funny to remember you by"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="something-to-share">Something I would like to share (optional)</label>
+                    <textarea id="something-to-share" name="somethingToShare" rows="2" placeholder="Anything else you want to share"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Footer Links</legend>
+
+                <div class="form-group">
+                    <label for="link-label-1">Link 1 text</label>
+                    <input id="link-label-1" name="linkLabel1" type="text" value="CLT Web" placeholder="Link text" required>
+                    <label for="link-url-1">Link 1 URL</label>
+                    <input id="link-url-1" name="linkUrl1" type="url" value="https://webpages.charlotte.edu/" placeholder="https://example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="link-label-2">Link 2 text</label>
+                    <input id="link-label-2" name="linkLabel2" type="text" value="GitHub.io" placeholder="Link text" required>
+                    <label for="link-url-2">Link 2 URL</label>
+                    <input id="link-url-2" name="linkUrl2" type="url" value="https://novnov111.github.io/mmerino4.github.io/" placeholder="https://example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="link-label-3">Link 3 text</label>
+                    <input id="link-label-3" name="linkLabel3" type="text" value="GitHub" placeholder="Link text" required>
+                    <label for="link-url-3">Link 3 URL</label>
+                    <input id="link-url-3" name="linkUrl3" type="url" value="https://github.com/novnov111" placeholder="https://example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="link-label-4">Link 4 text</label>
+                    <input id="link-label-4" name="linkLabel4" type="text" value="freeCodeCamp" placeholder="Link text" required>
+                    <label for="link-url-4">Link 4 URL</label>
+                    <input id="link-url-4" name="linkUrl4" type="url" value="https://www.freecodecamp.org/mmerino4" placeholder="https://example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="link-label-5">Link 5 text</label>
+                    <input id="link-label-5" name="linkLabel5" type="text" value="Codecademy" placeholder="Link text" required>
+                    <label for="link-url-5">Link 5 URL</label>
+                    <input id="link-url-5" name="linkUrl5" type="url" value="https://www.codecademy.com/profiles/michaelmerino11" placeholder="https://example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="link-label-6">Link 6 text</label>
+                    <input id="link-label-6" name="linkLabel6" type="text" value="LinkedIn" placeholder="Link text" required>
+                    <label for="link-url-6">Link 6 URL</label>
+                    <input id="link-url-6" name="linkUrl6" type="url" value="https://www.linkedin.com/in/michael-undefined-489778436/" placeholder="https://example.com" required>
+                </div>
+            </fieldset>
+
+            <div class="button-row">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button id="clear-button" type="button">Clear</button>
+            </div>
+
+            <!-- Part 2: output generators. -->
+            <div class="button-row">
+                <button id="generate-html" type="button">Generate HTML</button>
+                <button id="generate-json" type="button">Generate JSON</button>
+                <button id="generate-xml" type="button">Generate XML</button>
+            </div>
+        </form>
+
+        <div id="output-area"></div>
+
+    </main>
+
+    <hr>
+
+    <div id="footer-slot">
+        <div data-include="components/footer.html"></div>
+    </div>
+
+    <div id="start-over" hidden></div>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+
+</body>
+
+</html>
