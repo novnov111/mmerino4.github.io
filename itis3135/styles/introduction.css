@@ -1,0 +1,50 @@
+ /* Layout for the introduction form only. Scoped to .form-panel, so it never touches the generated introduction page. */
+
+.form-panel label {
+    display: block;
+    margin: 8px 0 4px;
+}
+
+.form-panel input[type="text"],
+.form-panel input[type="url"],
+.form-panel input[type="date"],
+.form-panel textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+    font-family: inherit;
+}
+
+.form-panel fieldset {
+    margin-bottom: 20px;
+}
+
+.form-panel .course-row {
+    border-bottom: 1px solid #3d2b2b;
+    padding-bottom: 12px;
+}
+
+.form-panel .course-row input {
+    margin-bottom: 6px;
+}
+
+.form-panel .form-preview img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+}
+
+.form-panel .button-row {
+    margin: 15px 0;
+}
+
+.form-panel button {
+    margin-right: 8px;
+    padding: 6px 14px;
+}
+
+#output-area textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: monospace;
+}
