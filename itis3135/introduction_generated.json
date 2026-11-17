@@ -1,0 +1,85 @@
+{
+  "firstName": "Michael",
+  "middleName": "",
+  "nickname": "Mike",
+  "lastName": "Merino",
+  "acknowledgment": "I understand that this is a public document, and I won't put anything here I wouldn't want anyone to see.",
+  "acknowledgmentDate": "11/15/26",
+  "prettyNameDivider": "|",
+  "adjectives": "Midnight",
+  "animal": "Mustang",
+  "img": "images/me-in-brazil.jpg",
+  "pictureAlt": "Michael in Brazil",
+  "caption": "Michael Merino in Brazil",
+  "personalInfo": {
+    "statement": "My name is Michael, this is my third semester at UNCC. I have multiple hobbies but I can never master any of them. During my free time I like to work on my car, play chess, and finish my homework.",
+    "personalBackground": "I was born in California but grew up in NC since I was a little kid.",
+    "professionalBackground": "I used to be a Marine.",
+    "academicBackground": "Computer Science, projected graduation date 2027",
+    "primaryWorkComputer": "Dell Spectre XP",
+    "primaryWorkLocation": "In my apartment or VA lounge",
+    "alternateComputerLocation": "Costume old PC I built"
+  },
+  "courses": [
+    {
+      "department": "ITIS",
+      "courseNumber": "3200",
+      "courseTitle": "Intro to info security & Priv",
+      "reasonForTaking": "This is a class requirement but i always had a big interest in how security in computers works."
+    },
+    {
+      "department": "ITIS",
+      "courseNumber": "3130",
+      "courseTitle": "Human-Centered Computing",
+      "reasonForTaking": "Course requirement"
+    },
+    {
+      "department": "ITSC",
+      "courseNumber": "2600",
+      "courseTitle": "CS Program, Identity, Career",
+      "reasonForTaking": "Course requirement"
+    },
+    {
+      "department": "STAT",
+      "courseNumber": "1220",
+      "courseTitle": "Elements of stat",
+      "reasonForTaking": "Course requirement"
+    },
+    {
+      "department": "ITIS",
+      "courseNumber": "3135",
+      "courseTitle": "Front-End Web App Development",
+      "reasonForTaking": "This is a very interesting class for me. I am excited to understand a bit more how websites work because we interact with them everyday."
+    }
+  ],
+  "quote": "I have multiple hobbies but I can never master any of them.",
+  "quoteAuthor": "Michael Merino",
+  "funnyItem": "",
+  "somethingToShare": "",
+  "footerLinks": [
+    {
+      "label": "CLT Web",
+      "url": "https://webpages.charlotte.edu/"
+    },
+    {
+      "label": "GitHub.io",
+      "url": "https://novnov111.github.io/mmerino4.github.io/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/novnov111"
+    },
+    {
+      "label": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/mmerino4"
+    },
+    {
+      "label": "Codecademy",
+      "url": "https://www.codecademy.com/profiles/michaelmerino11"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/michael-undefined-489778436/"
+    }
+  ]
+}
