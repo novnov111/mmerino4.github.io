@@ -1,0 +1,97 @@
+/* Midnight Mustang Cocoa & Chess: navy, cream, and amber palette. */
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #f4ecd8;
+    color: #14213d;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Header and footer use navy with cream text; navy and cream are chosen instead of black and white. */
+header, footer {
+    background-color: #14213d;
+    color: #f4ecd8;
+    text-align: center;
+    padding: 12px 20px;
+}
+
+header h1 {
+    margin: 8px 0;
+    color: #d98e04;
+}
+
+h2 {
+    color: #8a4b00;
+    border-bottom: 3px solid #d98e04;
+    padding-bottom: 4px;
+}
+
+a {
+    color: #8a4b00;
+    text-decoration: underline;
+}
+a:visited {
+    color: #8a4b00;
+}
+header a, footer a {
+    color: #f4ecd8;
+}
+header a:visited, footer a:visited {
+    color: #f4ecd8;
+}
+nav a {
+    padding: 4px 6px;
+}
+
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+figcaption {
+    font-size: 0.85em;
+    color: #8a4b00;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 16px 0;
+}
+th, td {
+    padding: 8px 14px;
+    text-align: left;
+    border-bottom: 1px solid #d98e04;
+}
+th {
+    background-color: #14213d;
+    color: #f4ecd8;
+}
+
+dt {
+    font-weight: bold;
+    color: #8a4b00;
+    margin-top: 12px;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0 12px;
+    }
+    nav a {
+        display: inline-block;
+        padding: 6px;
+    }
+}
