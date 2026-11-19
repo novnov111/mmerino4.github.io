@@ -19,12 +19,8 @@
 
 <body>
 
-    <header>
-        <h1>Midnight Mustang Cocoa &amp; Chess</h1>
-        <nav>
-            <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="menu.html">Menu</a> | <a href="hours.html">Hours</a> | <a href="location.html">Location</a> | <a href="story.html">Our Story</a> | <a href="order.html">How to Order</a>
-        </nav>
-    </header>
+    <!-- This div is the target where the shared header component is loaded. -->
+    <div data-include="components/header.html"></div>
 
     <main>
 
@@ -48,10 +44,10 @@
 
     </main>
 
-    <footer>
-        <p>“One more move before midnight.”</p>
-        <p>Midnight Mustang Cocoa &amp; Chess is an imaginary business created by Michael Merino for ITIS3135.</p>
-    </footer>
+    <!-- This div is the target where the shared footer component is loaded. -->
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
 
 </body>
 
